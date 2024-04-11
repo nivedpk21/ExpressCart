@@ -1,0 +1,33 @@
+.main-div {
+  height: 100%;
+  width: 30%;
+  background-color: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.formerror-text {
+  color: red;
+  margin-left: 8px;
+}
+
+/* sm and below */
+
+@media screen and (max-width: 576px) {
+  .main-div {
+    height: 100%;
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+/* sm to md */
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .main-div {
+    height: 100%;
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}

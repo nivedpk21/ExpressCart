@@ -1,0 +1,38 @@
+.main-div {
+  width: 30%;
+  height: 800px;
+  margin-top: 50px;
+  background: white;
+}
+.form-label {
+  font-family: serif;
+  color: black;
+}
+.error-text {
+  font-size: 14px;
+  margin-left: 5px;
+  color: red;
+}
+
+/* sm and below */
+
+@media screen and (max-width: 576px) {
+  .fourbanner-div {
+    text-align: center;
+  }
+  .main-div {
+    width: 90%;
+    height: 440px;
+    margin-top: 70px;
+  }
+}
+
+/* sm to md */
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .main-div {
+    width: 50%;
+    height: 440px;
+    margin-top: 50px;
+  }
+}
