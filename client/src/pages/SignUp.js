@@ -55,7 +55,7 @@ export default function SignUp() {
 
     if (Object.keys(formerrors).length === 0 && issubmit) {
       axios
-        .post("http://localhost:4000/user/signup", UserData)
+        .post("https://expresscart.onrender.com/user/signup", UserData)
         .then((response) => {
           console.log(response);
         })

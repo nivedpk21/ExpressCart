@@ -10,7 +10,7 @@ export default function Processorder() {
   const [data, setData] = useState({});
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/seller/orderdetails/${id}`)
+      .get(`https://expresscart.onrender.com/seller/orderdetails/${id}`)
       .then((response) => {
         console.log(response);
         const data = response.data.data;
@@ -30,7 +30,7 @@ export default function Processorder() {
 
   const submit = (cartId) => {
     axios
-      .post(`http://localhost:4000/seller/orderstatus/${cartId}`, status)
+      .post(`https://expresscart.onrender.com/seller/orderstatus/${cartId}`, status)
       .then((response) => {
         console.log(response);
         const message = response.data.message;

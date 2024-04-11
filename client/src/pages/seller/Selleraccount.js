@@ -8,7 +8,7 @@ export default function Selleraccount() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/seller/viewprofile", {
+      .get("https://expresscart.onrender.com/seller/viewprofile", {
         headers: { Authorization: `bearer ${token}` },
       })
       .then((response) => {

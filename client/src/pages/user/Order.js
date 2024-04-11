@@ -11,7 +11,7 @@ export default function Order() {
   console.log(token);
   useEffect(() => {
     axios
-      .get("http://localhost:4000/user/vieworder", {
+      .get("https://expresscart.onrender.com/user/vieworder", {
         headers: { Authorization: `bearer ${token}` },
       })
       .then((response) => {

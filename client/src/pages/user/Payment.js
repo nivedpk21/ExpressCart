@@ -15,7 +15,7 @@ export default function Payment() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/user/viewprofile", {
+      .get("https://expresscart.onrender.com/user/viewprofile", {
         headers: { Authorization: `bearer ${token}` },
       })
       .then((response) => {
@@ -30,7 +30,7 @@ export default function Payment() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/user/viewproduct/${id}`)
+      .get(`https://expresscart.onrender.com/user/viewproduct/${id}`)
       .then((response) => {
         console.log("productdata", response);
         const data = response.data.data;
@@ -50,7 +50,7 @@ export default function Payment() {
       amount: grandTotal,
     };
     axios
-      .post("http://localhost:4000/user/placeorder", orderData, {
+      .post("https://expresscart.onrender.com/user/placeorder", orderData, {
         headers: { Authorization: `bearer ${token}` },
       })
       .then((response) => {

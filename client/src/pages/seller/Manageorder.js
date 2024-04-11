@@ -11,7 +11,7 @@ export default function Manageorder() {
   const [postsPerpage, setPostsperpage] = useState(8);
   useEffect(() => {
     axios
-      .get("http://localhost:4000/seller/manageorder", {
+      .get("https://expresscart.onrender.com/seller/manageorder", {
         headers: { Authorization: `bearer ${token}` },
       })
       .then((response) => {
@@ -27,7 +27,7 @@ export default function Manageorder() {
   };
   const submit = () => {
     axios
-      .get(`http://localhost:4000/seller/filterorder/${status}`, {
+      .get(`https://expresscart.onrender.com/seller/filterorder/${status}`, {
         headers: { Authorization: `bearer ${token}` },
       })
       .then((response) => {

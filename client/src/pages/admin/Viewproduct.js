@@ -10,7 +10,7 @@ export default function Viewproduct() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/admin/viewproduct/${id}`)
+      .get(`https://expresscart.onrender.com/admin/viewproduct/${id}`)
       .then((response) => {
         console.log(response);
         const data = response.data.data;

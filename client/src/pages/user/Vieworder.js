@@ -12,7 +12,7 @@ export default function Vieworder() {
   const token = localStorage.getItem("token");
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/user/orderdetails/${id}`)
+      .get(`https://expresscart.onrender.com/user/orderdetails/${id}`)
       .then((response) => {
         console.log(response);
         const data = response.data.data;

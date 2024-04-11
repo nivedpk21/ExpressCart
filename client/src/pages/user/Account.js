@@ -10,7 +10,7 @@ export default function Account() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/user/viewprofile", {
+      .get("https://expresscart.onrender.com/user/viewprofile", {
         headers: { Authorization: `bearer ${token}` },
       })
       .then((response) => {

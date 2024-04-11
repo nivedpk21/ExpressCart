@@ -73,7 +73,7 @@ export default function Addproduct() {
       formdata.append("image", productData.image);
 
       axios
-        .post("http://localhost:4000/seller/addproduct", formdata, {
+        .post("https://expresscart.onrender.com/seller/addproduct", formdata, {
           headers: { Authorization: `bearer ${token}` },
         })
         .then((response) => {

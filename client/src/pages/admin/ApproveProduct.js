@@ -7,7 +7,7 @@ export default function ApproveProduct() {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:4000/admin/approveproduct")
+      .get("https://expresscart.onrender.com/admin/approveproduct")
       .then((response) => {
         console.log(response);
         const data = response.data.data;

@@ -38,7 +38,7 @@ export default function Viewproductuser() {
   const token = localStorage.getItem("token");
   const addwishlist = (productId) => {
     axios
-      .post(`http://localhost:4000/user/addwishlist/${productId}`, null, {
+      .post(`https://expresscart.onrender.com/user/addwishlist/${productId}`, null, {
         headers: { Authorization: `bearer ${token}` },
       })
       .then((response) => {

@@ -9,7 +9,7 @@ export default function Buyproduct() {
   const [quantity, setQuantity] = useState(1);
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/user/viewproduct/${id}`)
+      .get(`https://expresscart.onrender.com/user/viewproduct/${id}`)
       .then((response) => {
         console.log(response);
         const data = response.data.data;

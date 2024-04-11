@@ -37,7 +37,7 @@ export default function Viewproductseller() {
 
     if (Object.keys(formerrors).length === 0 && issubmit) {
       axios
-        .post(`http://localhost:4000/seller/addquantity/${productId}`, quantity)
+        .post(`https://expresscart.onrender.com/seller/addquantity/${productId}`, quantity)
         .then((response) => {
           console.log(response);
           const message = response.data.message;
@@ -51,7 +51,7 @@ export default function Viewproductseller() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/seller/viewproduct/${id}`, {
+      .get(`https://expresscart.onrender.com/seller/viewproduct/${id}`, {
         headers: { Authorization: `bearer ${token}` },
       })
       .then((response) => {
@@ -67,7 +67,7 @@ export default function Viewproductseller() {
   const deleteProduct = (product_id) => {
     console.log("product_id", product_id);
     axios
-      .get(`http://localhost:4000/seller/deleteproduct/${product_id}`, {
+      .get(`https://expresscart.onrender.com/seller/deleteproduct/${product_id}`, {
         headers: { Authorization: `bearer ${token}` },
       })
       .then((response) => {

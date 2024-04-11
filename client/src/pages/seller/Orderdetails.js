@@ -7,7 +7,7 @@ export default function Orderdetails() {
   const { ID } = useParams();
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/seller/orderdetails/${ID}`)
+      .get(`https://expresscart.onrender.com/seller/orderdetails/${ID}`)
       .then((response) => {
         console.log(response);
       })
@@ -18,7 +18,7 @@ export default function Orderdetails() {
 
   const processOrder = (orderid) => {
     axios
-      .get(`http://localhost:4000/seller/processorder/${orderid}`)
+      .get(`https://expresscart.onrender.com/processorder/${orderid}`)
       .then((response) => {
         console.log(response);
       })
@@ -29,7 +29,7 @@ export default function Orderdetails() {
 
   const orderShipped = (orderid) => {
     axios
-      .get(`http://localhost:4000/seller/shiporder/${orderid}`)
+      .get(`https://expresscart.onrender.com/seller/shiporder/${orderid}`)
       .then((response) => {
         console.log(response);
       })
@@ -40,7 +40,7 @@ export default function Orderdetails() {
 
   const orderDelivered = (orderid) => {
     axios
-      .get(`http://localhost:4000/seller/orderdelivered/${orderid}`)
+      .get(`https://expresscart.onrender.com/seller/orderdelivered/${orderid}`)
       .then((response) => {
         console.log(response);
       })

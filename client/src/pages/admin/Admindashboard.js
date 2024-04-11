@@ -6,7 +6,7 @@ export default function Admindashboard() {
   const [userData, setUserdata] = useState("");
   useEffect(() => {
     axios
-      .get("http://localhost:4000/admin/totalusers")
+      .get("https://expresscart.onrender.com/admin/totalusers")
       .then((response) => {
         console.log(response);
         const userdata = response.data.data;
@@ -20,7 +20,7 @@ export default function Admindashboard() {
   const [SellerData, setSellerdata] = useState("");
   useEffect(() => {
     axios
-      .get("http://localhost:4000/admin/totalseller")
+      .get("https://expresscart.onrender.com/admin/totalseller")
       .then((response) => {
         console.log(response);
         const sellerdata = response.data.data;
@@ -34,7 +34,7 @@ export default function Admindashboard() {
   const [productData, setProductdata] = useState("");
   useEffect(() => {
     axios
-      .get("http://localhost:4000/admin/totalproduct")
+      .get("https://expresscart.onrender.com/admin/totalproduct")
       .then((response) => {
         console.log(response);
         const productdata = response.data.data;

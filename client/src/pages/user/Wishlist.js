@@ -10,7 +10,7 @@ export default function Wishlist() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/user/viewwishlist", {
+      .get("https://expresscart.onrender.com/user/viewwishlist", {
         headers: { Authorization: `bearer ${token}` },
       })
       .then((response) => {
@@ -26,7 +26,7 @@ export default function Wishlist() {
   const deleteItem = (productId) => {
     console.log("clicked");
     axios
-      .get(`http://localhost:4000/user/removewishlist/${productId}`)
+      .get(`https://expresscart.onrender.com/user/removewishlist/${productId}`)
       .then((response) => {
         console.log(response);
       })

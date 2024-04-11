@@ -25,7 +25,7 @@ export default function ApproveSeller() {
   const [postsPerpage, setPostsperpage] = useState(5);
 
   useEffect(() => {
-    axios.get("http://localhost:4000/admin/sellerdetails").then((response) => {
+    axios.get("https://expresscart.onrender.com/admin/sellerdetails").then((response) => {
       console.log(response);
       const data = response.data.data;
       setData(data);

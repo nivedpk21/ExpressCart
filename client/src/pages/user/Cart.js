@@ -12,7 +12,7 @@ export default function Cart() {
     console.log(token);
 
     axios
-      .get("http://localhost:4000/user/viewcart", {
+      .get("https://expresscart.onrender.com/user/viewcart", {
         headers: { Authorization: `bearer ${token}` },
       })
       .then((response) => {

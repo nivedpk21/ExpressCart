@@ -11,7 +11,7 @@ export default function Manageproduct() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/seller/manageproduct", {
+      .get("https://expresscart.onrender.com/seller/manageproduct", {
         headers: { Authorization: `bearer ${token}` },
       })
       .then((response) => {
@@ -31,7 +31,7 @@ export default function Manageproduct() {
   console.log("status", status);
   const submit = () => {
     axios
-      .get(`http://localhost:4000/seller/filterproducts/${status}`, {
+      .get(`https://expresscart.onrender.com/seller/filterproducts/${status}`, {
         headers: { Authorization: `bearer ${token}` },
       })
       .then((response) => {

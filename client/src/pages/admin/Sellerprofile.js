@@ -10,7 +10,7 @@ export default function Sellerprofile() {
   const [data, setData] = useState({});
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/admin/sellerprofile/${id}`)
+      .get(`https://expresscart.onrender.com/admin/sellerprofile/${id}`)
       .then((response) => {
         console.log(response);
         const data = response.data.data;
@@ -23,7 +23,7 @@ export default function Sellerprofile() {
   }, []);
 
   const approve = (Id) => {
-    axios.get(`http://localhost:4000/admin/approveseller/${Id}`).then((response) => {
+    axios.get(`https://expresscart.onrender.com/admin/approveseller/${Id}`).then((response) => {
       console.log(response);
       const message = response.data.message;
       toast.success(message);
