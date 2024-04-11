@@ -24,7 +24,7 @@ export default function Viewproduct() {
   const approve = (productId) => {
     console.log("hello");
     axios
-      .get(`http://localhost:4000/admin/updateproductstatus/${productId}`)
+      .get(`https://expresscart.onrender.com/admin/updateproductstatus/${productId}`)
       .then((response) => {
         console.log(response);
         const message = response.data.message;
