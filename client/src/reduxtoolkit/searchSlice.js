@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export const fetchresult = createAsyncThunk("result/fetchresult", async (searchterm) => {
-  const response = await axios.post("http://localhost:4000/user/searchproduct", searchterm);
+  const response = await axios.post("https://expresscart.onrender.com/user/searchproduct", searchterm);
   console.log("response", response);
   return response;
 });
