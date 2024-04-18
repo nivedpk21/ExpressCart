@@ -67,7 +67,7 @@ export default function Login() {
         <div style={{ paddingTop: "25px", paddingLeft: "20px", paddingRight: "20px" }}>
           <form>
             <div class="mb-3">
-              <label class="form-label">Username newewe</label>
+              <label class="form-label">Username</label>
               <span className="error-text">{formErrors.username}</span>
               <input
                 placeholder="user/admin/seller"
