@@ -70,6 +70,7 @@ export default function Login() {
               <label class="form-label">Username</label>
               <span className="error-text">{formErrors.username}</span>
               <input
+                placeholder="user/admin/seller"
                 onChange={inputChange}
                 name="username"
                 type="text"
@@ -85,6 +86,7 @@ export default function Login() {
               </label>
               <span className="error-text">{formErrors.password}</span>
               <input
+                placeholder="123"
                 onChange={inputChange}
                 name="password"
                 type="password"
