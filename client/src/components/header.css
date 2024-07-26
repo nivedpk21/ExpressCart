@@ -1,72 +1,11 @@
-/* header */
-
-.header-div {
-  height: 80px;
-  background: #fd6506;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.brand-name {
-  color: white;
-}
-
-.header-icon {
-  color: white;
-  background-color: white;
-}
-.icon-name {
-  color: white;
-  font-family: serif;
-  font-size: 14px;
-}
-.menu-div {
-  display: flex;
-  justify-content: space-between;
-  width: 20%;
-  align-items: center;
-}
-.menu-text {
-  color: white;
-  font-family: serif;
-}
-
-/* navigation */
-
 .navbar {
-  background-color: white;
+  height: 10vh;
 }
-
+.navbar-brand {
+  font-size: 1.6rem;
+}
 .nav-link {
-  color: black;
+  color: white;
   font-family: serif;
-  font-size: 18px;
-}
-.nav-link:hover {
-  color: red;
-}
-.nav-link:hover {
-  color: green;
-}
-
-.activecolor {
-  color: red;
-}
-
-/* sm and below */
-
-@media screen and (max-width: 576px) {
-  .menu-div {
-    /* display: none; */
-    width: 20%;
-  }
-}
-
-/* sm to md */
-
-@media screen and (min-width: 577px) and (max-width: 992px) {
-  .menu-div {
-    width: 30%;
-  }
+  font-size: 1.3rem;
 }

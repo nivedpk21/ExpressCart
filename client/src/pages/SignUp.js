@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import axios from "axios";
 import "./signup.css";
+import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function SignUp() {
+  const [loading, setLoading] = useState(false);
   const [active, setActive] = useState("user");
   const [form, setForm] = useState("user");
 
   // user form -------------------------------
 
   const [formerrors, setFormerrors] = useState({});
-  const [issubmit, setIsSubmit] = useState(false);
 
   const [UserData, setUserData] = useState({
     name: "",
@@ -49,19 +51,25 @@ export default function SignUp() {
   };
 
   const submit = (e) => {
-    setIsSubmit(true);
     e.preventDefault();
-    setFormerrors(validate(UserData));
+    const formValidate = validate(UserData);
+    setFormerrors(formValidate);
 
-    if (Object.keys(formerrors).length === 0 && issubmit) {
+    if (Object.keys(formValidate).length === 0) {
+      setLoading(true);
       axios
         .post("https://expresscart.onrender.com/user/signup", UserData)
         .then((response) => {
+          setLoading(false);
           console.log(response);
+          const message = response.data.message;
+          toast.success(message);
         })
         .catch((error) => {
+          setLoading(false);
           console.log(error);
           const errorMessage = error.response.data.message;
+          toast.error(errorMessage);
           console.log(errorMessage);
         });
     }
@@ -146,11 +154,12 @@ export default function SignUp() {
   };
 
   const sellersubmit = (e) => {
-    setIsSubmit(true);
     e.preventDefault();
-    setSellerformerrors(sellervalidation(sellerData));
+    const formValidate2 = sellervalidation(sellerData);
+    setSellerformerrors(formValidate2);
 
-    if (Object.keys(sellerFormerrors).length === 0 && issubmit) {
+    if (Object.keys(formValidate2).length === 0) {
+      setLoading(true);
       const formdata = new FormData();
       formdata.append("name", sellerData.name);
       formdata.append("username", sellerData.username);
@@ -172,9 +181,13 @@ export default function SignUp() {
       axios
         .post("http://localhost:4000/seller/signup", formdata)
         .then((response) => {
+          setLoading(false);
           console.log(response);
+          toast.success(response.data.message);
         })
         .catch((error) => {
+          setLoading(false);
+          toast.error(error.response.data.message);
           console.log(error);
         });
     }
@@ -183,6 +196,7 @@ export default function SignUp() {
   return (
     <>
       <Header />
+      <Toaster position="top-center" reverseOrder={false} />
       <div className="main-div container-fluid border rounded">
         <div className="border-bottom" style={{ height: "65px", padding: "15px" }}>
           <h5 style={{ textAlign: "center" }}>Sign Up</h5>
@@ -301,14 +315,27 @@ export default function SignUp() {
                   />
                 </div>
                 <div className=" " style={{ marginTop: "35px" }}>
-                  <button
-                    onClick={submit}
-                    type="submit"
-                    class="btn btn-primary"
-                    style={{ width: "100%" }}
-                  >
-                    Sign Up
-                  </button>
+                  {loading ? (
+                    <>
+                      <button
+                        onClick={submit}
+                        type="submit"
+                        class="btn btn-primary"
+                        style={{ width: "100%" }}
+                      >
+                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                      </button>
+                    </>
+                  ) : (
+                    <button
+                      onClick={submit}
+                      type="submit"
+                      class="btn btn-primary"
+                      style={{ width: "100%" }}
+                    >
+                      Sign Up
+                    </button>
+                  )}
                 </div>
                 <div
                   style={{
@@ -320,6 +347,7 @@ export default function SignUp() {
                     style={{
                       color: "grey",
                       fontFamily: "serif",
+                      fontSize: "small",
                     }}
                   >
                     already registered ?
@@ -565,14 +593,29 @@ export default function SignUp() {
               </div>
               <div>
                 <div className=" " style={{ marginTop: "35px" }}>
-                  <button
-                    onClick={sellersubmit}
-                    type="submit"
-                    class="btn btn-primary"
-                    style={{ width: "100%" }}
-                  >
-                    Sign Up
-                  </button>
+                  {loading ? (
+                    <>
+                      <button
+                        onClick={sellersubmit}
+                        type="submit"
+                        class="btn btn-primary"
+                        style={{ width: "100%" }}
+                      >
+                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <button
+                        onClick={sellersubmit}
+                        type="submit"
+                        class="btn btn-primary"
+                        style={{ width: "100%" }}
+                      >
+                        Sign Up
+                      </button>
+                    </>
+                  )}
                 </div>
                 <div
                   style={{
@@ -595,9 +638,9 @@ export default function SignUp() {
                     marginBottom: "15px",
                   }}
                 >
-                  <button style={{ width: "100%" }} className="btn btn-outline-primary">
+                  <Link style={{ width: "100%" }} className="btn btn-outline-primary" to="/signin">
                     Sign In
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -8,6 +8,7 @@
 .formerror-text {
   color: red;
   margin-left: 8px;
+  font-size: small;
 }
 
 /* sm and below */

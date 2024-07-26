@@ -1,7 +1,16 @@
+.search-div {
+  width: 30%;
+}
 .search-box {
   border-radius: 18px 0px 0 18px;
-  height: 43px;
+  height: 40px;
 }
 .search-button {
   border-radius: 0 18px 18px 0;
+}
+
+@media only screen and (max-width: 576px) {
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
 }

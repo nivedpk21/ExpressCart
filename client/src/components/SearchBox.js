@@ -35,12 +35,12 @@ export default function SearchBox() {
 
   return (
     <>
-      <div className="header-item " style={{ display: "flex", width: "30%" }}>
+      <div className="container-fluid d-flex search-div">
         <input
           placeholder="search for products..."
           onChange={inputchange}
           type="text"
-          class="search-box form-control"
+          className="search-box form-control"
           id="searchbox"
           aria-describedby="searchbox"
         />

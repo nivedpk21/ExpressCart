@@ -3,11 +3,12 @@ import Header from "../components/Header";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Login() {
   const navigate = useNavigate();
-  const [issubmit, setIsSubmit] = useState(false);
   const [formErrors, setFormErrors] = useState({});
+  const [loading, setLoading] = useState(false);
   const [loginData, setLoginData] = useState({
     username: "",
     password: "",
@@ -34,15 +35,19 @@ export default function Login() {
 
   const submit = (e) => {
     e.preventDefault();
-    setIsSubmit(true);
-    setFormErrors(validate(loginData));
+    const newFormErrors = validate(loginData);
+    setFormErrors(newFormErrors);
 
-    if (Object.keys(formErrors).length === 0 && issubmit) {
+    if (Object.keys(newFormErrors).length === 0) {
+      setLoading(true);
       axios
         .post("https://expresscart.onrender.com/user/signin", loginData)
         .then((response) => {
+          setLoading(false);
           console.log(response);
           const data = response.data;
+          const message = response.data.data.message;
+          toast.success(message);
           if (data) {
             localStorage.setItem("token", response.data.token);
             localStorage.setItem("role", response.data.data.role);
@@ -50,8 +55,10 @@ export default function Login() {
           }
         })
         .catch((error) => {
+          setLoading(false);
           console.log(error);
           const errormessage = error.response.data.message;
+          toast.error(errormessage);
           console.log(errormessage);
         });
     }
@@ -59,6 +66,7 @@ export default function Login() {
   return (
     <>
       <Header />
+      <Toaster position="top-center" reverseOrder={false} />
       <div className="main-div container-fluid border rounded">
         <div className="border-bottom" style={{ height: "65px", padding: "15px" }}>
           <h5 style={{ textAlign: "center" }}>Sign In</h5>
@@ -93,14 +101,30 @@ export default function Login() {
               />
             </div>
             <div className=" " style={{ marginTop: "35px" }}>
-              <button
-                onClick={submit}
-                type="submit"
-                class="btn btn-primary"
-                style={{ width: "100%" }}
-              >
-                Sign In
-              </button>
+              {loading ? (
+                <>
+                  <button
+                    onClick={submit}
+                    type="submit"
+                    class="btn btn-primary"
+                    style={{ width: "100%" }}
+                  >
+                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                    <span role="status">Logging in...</span>
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button
+                    onClick={submit}
+                    type="submit"
+                    class="btn btn-primary"
+                    style={{ width: "100%" }}
+                  >
+                    Sign In
+                  </button>
+                </>
+              )}
             </div>
             <div style={{ marginTop: "3px", textAlign: "center" }}>
               <p style={{ color: "grey", fontFamily: "serif" }}>Forgot your password ? </p>

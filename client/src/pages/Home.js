@@ -9,8 +9,8 @@ export default function Home() {
       <Header />
       <section>
         <div className="first-section container-fluid rounded border  h-100">
-          <div class="div-one container-fluid">
-            <div class="row">
+          <div className="div-one container-fluid">
+            <div className="row">
               {/* category col */}
 
               <div
@@ -204,7 +204,7 @@ export default function Home() {
 
           <div className="mb-4">
             <h5>Shop By Categories</h5>
-            <div style={{ display: "flex", justifyContent: "space-between", marginTop: "20px" }}>
+            <div className="lap-div">
               <div className="text-center">
                 <img src="./images/mobilephone.avif" class="img-fluid rounded-top" alt="" />
                 <p>SmartPhone</p>
@@ -212,25 +212,25 @@ export default function Home() {
               <div className="text-center">
                 <img
                   src="./images/home-20-categories-1-2_170x.avif"
-                  class="img-fluid rounded-top"
+                  className="img-fluid rounded-top"
                   alt=""
                 />
                 <p>Laptop</p>
               </div>
               <div className="text-center">
-                <img src="./images/television.avif" class="img-fluid rounded-top" alt="" />
+                <img src="./images/television.avif" className="img-fluid rounded-top" alt="" />
                 <p>Television</p>
               </div>
               <div className="text-center">
-                <img src="./images/pc.avif" class="img-fluid rounded-top" alt="" />
+                <img src="./images/pc.avif" className="img-fluid rounded-top" alt="" />
                 <p>Television</p>
               </div>
               <div className="text-center">
-                <img src="./images/gaming.avif" class="img-fluid rounded-top" alt="" />
+                <img src="./images/gaming.avif" className="img-fluid rounded-top" alt="" />
                 <p>Gaming</p>
               </div>
               <div className="text-center">
-                <img src="./images/audio.avif" class="img-fluid rounded-top" alt="" />
+                <img src="./images/audio.avif" className="img-fluid rounded-top" alt="" />
                 <p>Audio</p>
               </div>
             </div>
@@ -238,13 +238,13 @@ export default function Home() {
 
           {/* new release and featured  */}
           <div>
-            <div class="row justify-content-center align-items-center g-2">
-              <div class="colcol-sm-12 col-md-12 col-lg-6">
-                <div style={{ backgroundColor: "white", height: "500px" }}></div>
+            <div className="row justify-content-center align-items-center g-2">
+              <div className="colcol-sm-12 col-md-12 col-lg-6">
+                <div style={{ backgroundColor: "white", height: "450px" }}></div>
               </div>
 
-              <div class="colcol-sm-12 col-md-12 col-lg-6">
-                <div style={{ backgroundColor: "white", height: "500px" }}></div>
+              <div className="colcol-sm-12 col-md-12 col-lg-6">
+                <div style={{ backgroundColor: "white", height: "450px" }}></div>
               </div>
             </div>
           </div>
@@ -254,27 +254,27 @@ export default function Home() {
             <h5>Top Brands</h5>
             <div className="mt-3" style={{ display: "flex", justifyContent: "space-between" }}>
               <div>
-                <img src="./images/brand1.avif" class="img-fluid rounded-top" alt="" />
+                <img src="./images/brand1.avif" className="img-fluid rounded-top" alt="" />
               </div>
 
               <div>
-                <img src="./images/brand2.avif" class="img-fluid rounded-top" alt="" />
+                <img src="./images/brand2.avif" className="img-fluid rounded-top" alt="" />
               </div>
 
               <div>
-                <img src="./images/brand3.avif" class="img-fluid rounded-top" alt="" />
+                <img src="./images/brand3.avif" className="img-fluid rounded-top" alt="" />
               </div>
 
               <div>
-                <img src="./images/brand4.avif" class="img-fluid rounded-top" alt="" />
+                <img src="./images/brand4.avif" className="img-fluid rounded-top" alt="" />
               </div>
 
               <div>
-                <img src="./images/brand1.avif" class="img-fluid rounded-top" alt="" />
+                <img src="./images/brand1.avif" className="img-fluid rounded-top" alt="" />
               </div>
 
               <div>
-                <img src="./images/brand3.avif" class="img-fluid rounded-top" alt="" />
+                <img src="./images/brand3.avif" className="img-fluid rounded-top" alt="" />
               </div>
             </div>
           </div>
@@ -287,11 +287,11 @@ export default function Home() {
           {/* banner */}
           <div className="mt-5" style={{ display: "flex", justifyContent: "space-between" }}>
             <div style={{ padding: "2px" }}>
-              <img src="./images/tvbanner.webp" class="img-fluid rounded-top" alt="" />
+              <img src="./images/tvbanner.webp" className="img-fluid rounded-top" alt="" />
             </div>
 
             <div style={{ padding: "2px" }}>
-              <img src="./images/machinebanner.webp" class="img-fluid rounded-top" alt="" />
+              <img src="./images/machinebanner.webp" className="img-fluid rounded-top" alt="" />
             </div>
           </div>
 
@@ -301,7 +301,7 @@ export default function Home() {
             <h5>Top Deals</h5>
             <div className="mt-3" style={{ display: "flex" }}>
               <div>
-                <img src="./images/clothingoffer.webp" class="img-fluid rounded-top" alt="" />
+                <img src="./images/clothingoffer.webp" className="img-fluid rounded-top" alt="" />
               </div>
             </div>
           </div>
@@ -309,40 +309,25 @@ export default function Home() {
           {/* furniture banner */}
           <div className="mt-5" style={{ display: "flex", justifyContent: "space-between" }}>
             <div style={{ padding: "2px" }}>
-              <img src="./images/chair1.avif" class="img-fluid rounded-top" alt="" />
+              <img src="./images/chair1.avif" className="img-fluid rounded-top" alt="" />
             </div>
 
             <div style={{ padding: "2px" }}>
-              <img src="./images/chair2.webp" class="img-fluid rounded-top" alt="" />
+              <img src="./images/chair2.webp" className="img-fluid rounded-top" alt="" />
             </div>
 
             <div style={{ padding: "2px" }}>
-              <img src="./images/chair3.avif" class="img-fluid rounded-top" alt="" />
+              <img src="./images/chair3.avif" className="img-fluid rounded-top" alt="" />
             </div>
           </div>
 
           {/* why to shop with us */}
-          <div
-            className="mt-5 p-5 blue-div"
-            style={{ height: "500px", backgroundColor: "#0180ff" }}
-          >
+          <div className="mt-5 p-5 blue-div">
             <h4 className="mb-5" style={{ textAlign: "center", color: "white" }}>
               Why Shop With Us
             </h4>
-            <div className="" style={{ display: "flex", justifyContent: "space-between" }}>
-              <div
-                className="rounded-3 p-4 blue-div-item"
-                style={{
-                  backgroundColor: "white",
-                  width: "18%",
-                  height: "300px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  textAlign: "center",
-                }}
-              >
+            <div className="why-shop-main-div">
+              <div className="rounded-3 p-4 blue-div-item">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
@@ -354,25 +339,10 @@ export default function Home() {
                   <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                 </svg>
                 <h6 className="mt-3">QUALITY AND SAVING</h6>
-                <p style={{ textWrap: "nowrap" }}>
-                  Comprehensive quality control <br />
-                  and affordable prices
-                </p>
+                <p>Comprehensive quality control and affordable prices</p>
               </div>
 
-              <div
-                className="rounded-3 p-4 blue-div-item"
-                style={{
-                  backgroundColor: "white",
-                  width: "18%",
-                  height: "300px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  textAlign: "center",
-                }}
-              >
+              <div className="rounded-3 p-4 blue-div-item">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
@@ -384,22 +354,10 @@ export default function Home() {
                   <path d="M5.793 1a1 1 0 0 1 1.414 0l.647.646a.5.5 0 1 1-.708.708L6.5 1.707 2 6.207V12.5a.5.5 0 0 0 .5.5.5.5 0 0 1 0 1A1.5 1.5 0 0 1 1 12.5V7.207l-.146.147a.5.5 0 0 1-.708-.708zm3 1a1 1 0 0 1 1.414 0L12 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l1.854 1.853a.5.5 0 0 1-.708.708L15 8.207V13.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 4 13.5V8.207l-.146.147a.5.5 0 1 1-.708-.708zm.707.707L5 7.207V13.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5V7.207z" />
                 </svg>
                 <h6 className="mt-3">GLOBAL WAREHOUSE</h6>
-                <p style={{ textWrap: "nowrap" }}>37 overseas warehouses</p>
+                <p>37 overseas warehouses</p>
               </div>
 
-              <div
-                className="rounded-3 p-4 blue-div-item"
-                style={{
-                  backgroundColor: "white",
-                  width: "18%",
-                  height: "300px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  textAlign: "center",
-                }}
-              >
+              <div className="rounded-3 p-4 blue-div-item">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
@@ -411,24 +369,10 @@ export default function Home() {
                   <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
                 </svg>
                 <h6 className="mt-3">FAST SHIPPING</h6>
-                <p style={{ textWrap: "nowrap" }}>
-                  Fast and convenient door <br /> to door delivery
-                </p>
+                <p>Fast and convenient door to door delivery</p>
               </div>
 
-              <div
-                className="rounded-3 p-4 blue-div-item"
-                style={{
-                  backgroundColor: "white",
-                  width: "18%",
-                  height: "300px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  textAlign: "center",
-                }}
-              >
+              <div className="rounded-3 p-4 blue-div-item">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
@@ -443,25 +387,10 @@ export default function Home() {
                   />
                 </svg>
                 <h6 className="mt-3">PAYMENT SECURITY</h6>
-                <p style={{ textWrap: "nowrap" }}>
-                  More than 10 different
-                  <br /> secure payment methods
-                </p>
+                <p>More than 10 different secure payment methods</p>
               </div>
 
-              <div
-                className="rounded-3 p-4 blue-div-item"
-                style={{
-                  backgroundColor: "white",
-                  width: "18%",
-                  height: "300px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  textAlign: "center",
-                }}
-              >
+              <div className="rounded-3 p-4 blue-div-item">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
@@ -473,10 +402,7 @@ export default function Home() {
                   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247m2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z" />
                 </svg>
                 <h6 className="mt-3">HAVE QUESTIONS?</h6>
-                <p style={{ textWrap: "nowrap" }}>
-                  24/7 Customer Service - We’re
-                  <br /> here and happy to help!
-                </p>
+                <p>24/7 Customer Service - We’re here and happy to help!</p>
               </div>
             </div>
           </div>
