@@ -48,11 +48,13 @@ export default function Manageproduct() {
   const firstPostindex = lastPostindex - postsPerpage;
   const currentPageposts = orderData.slice(firstPostindex, lastPostindex);
 
+  const imgUrl = "https://expresscart.onrender.com/images/newimg.jpeg";
+
   return (
     <>
       <Header />
       <div className="container-fluid" style={{ height: "100%", backgroundColor: "white" }}>
-        <div class="row justify-content-center align-items-center g-0" style={{height:"100%"}}>
+        <div class="row justify-content-center align-items-center g-0" style={{ height: "100%" }}>
           {/* search filters */}
 
           <div class="col col-sm-3">
@@ -152,11 +154,12 @@ export default function Manageproduct() {
                   <div class="col col-lg-3 col-md-3 col-sm-6">
                     <div class="card rounded-0" style={{ height: "300px" }}>
                       <img
-                        src={`./public/images/${item.images}`}
-                        class="card-img-top"
+                        src={imgUrl}
+                        // className="card-img-top"
                         alt="image"
-                        style={{ minHeight: "200px" }}
+                        style={{ width: "100%" }}
                       />
+                      <p>{item.images}</p>
                       <div class="card-body">
                         <div style={{ display: "flex" }}>
                           <Link to={`/viewproductseller/${item._id}`} class="card-title">
@@ -192,6 +195,8 @@ export default function Manageproduct() {
                 ))}
               </div>
             </div>
+
+            <img src={imgUrl} alt="lol" />
 
             <Pagination
               totalPosts={orderData.length}
