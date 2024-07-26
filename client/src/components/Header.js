@@ -66,17 +66,17 @@ export default function Header() {
                   </li>
                   <li className="nav-item">
                     <NavLink className="nav-link" to={"/addproduct"}>
-                      AddProduct
+                      Addproduct
                     </NavLink>
                   </li>
                   <li className="nav-item">
                     <NavLink className="nav-link" to={"/manageproducts"}>
-                      ManageProduct
+                      Manageproduct
                     </NavLink>
                   </li>
                   <li className="nav-item">
                     <NavLink className="nav-link" to={"/manageorder"}>
-                      ManageOrder
+                      Manageorder
                     </NavLink>
                   </li>
                 </>
