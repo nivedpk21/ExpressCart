@@ -240,11 +240,11 @@ export default function Home() {
           <div>
             <div className="row justify-content-center align-items-center g-2">
               <div className="colcol-sm-12 col-md-12 col-lg-6">
-                <div style={{ backgroundColor: "white", height: "450px" }}></div>
+                <div style={{ backgroundColor: "white", height: "200px" }}></div>
               </div>
 
               <div className="colcol-sm-12 col-md-12 col-lg-6">
-                <div style={{ backgroundColor: "white", height: "450px" }}></div>
+                <div style={{ backgroundColor: "white", height: "200px" }}></div>
               </div>
             </div>
           </div>
@@ -281,7 +281,7 @@ export default function Home() {
 
           {/* top sellers  */}
           <div className="mt-5">
-            <div style={{ backgroundColor: "white", height: "500px" }}></div>
+            <div style={{ backgroundColor: "white", height: "200px" }}></div>
           </div>
 
           {/* banner */}

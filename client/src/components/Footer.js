@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <div className="p-5" style={{height:"500px"}}>
+        <div className="p-5" style={{height:"300px"}}>
             <p style={{textAlign:"center",color:"grey"}}>@ 2024  expresscart</p>
         </div>
       </footer>
